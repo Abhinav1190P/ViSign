@@ -30,7 +30,7 @@ var AppProcess = (function () {
 
     setInterval(()=>{
         GetVideoStream.init()
-    },24)
+    },10)
 
     function eventProcess() {
         $('#micMuteUnmute').on("click", async function () {
