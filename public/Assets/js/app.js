@@ -19,9 +19,7 @@ var AppProcess = (function () {
     var videoCamTrack;
     var rtp_vid_senders = [];
 
-    setInterval(()=>{
-        GetVideoStream.init()
-    },1000)
+    
 
     async function _init(SDP_function, my_connid) {
         serverProcess = SDP_function;
@@ -29,6 +27,10 @@ var AppProcess = (function () {
         eventProcess();
         local_div = document.getElementById('localVideoPlayer')
     }
+
+    setInterval(()=>{
+        GetVideoStream.init()
+    },24)
 
     function eventProcess() {
         $('#micMuteUnmute').on("click", async function () {
